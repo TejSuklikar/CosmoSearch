@@ -1,0 +1,109 @@
+.display-page {
+    background-image: url('/src/assets/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+  
+.back-button {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    background-color: #1a4b91;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+  
+.gallery-card {
+    display: flex;
+    background-color: #fae6fa;
+    padding: 20px;
+    border-radius: 15px;
+    width: 70%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+  
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+  
+.gallery-image {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+  
+.image-date {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    font-family: "Space Grotesk", sans-serif;
+}
+  
+.card-details {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 400px;
+}
+  
+.image-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: black;
+    font-family: "Space Grotesk", sans-serif;
+}
+  
+.image-description {
+    font-size: 1rem;
+    color: black;
+    font-family: "Space Grotesk", sans-serif;
+    text-align: justify;
+}
+  
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+  
+.nav-button {
+    background-color: transparent;
+    color: #fae6fa;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.nav-button:hover {
+    color: #f5c9f5;
+}
+  
+.nav-button:first-child {
+    position: absolute;
+    left: 20px;
+}
+  
+.nav-button:last-child {
+    position: absolute;
+    right: 20px;
+}

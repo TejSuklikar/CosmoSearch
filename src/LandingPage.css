@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+.landing-page {
+    background-image: url('/src/assets/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .landing-title {  
+    font-size: 2rem; 
+    background-color: #fae6fa; 
+    padding: 8px 0px;
+    border-radius: 11px;    
+    color: black;
+    font-family: 'Space Grotesk', 'Space Mono', sans-serif;
+    font-weight: 10;
+    letter-spacing: 3px; 
+    margin-bottom: 10px;
+    text-transform: none; 
+    width: 450px; 
+}
+  
+.input-field {
+    margin: 20px 0;
+    padding: 6px;
+    border-radius: 10px;
+    border: 3px solid #1a4b91; 
+    width: 350px; 
+    font-size: 1.2rem;
+    text-align: left;
+    background-color: white;
+    color: black;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.year-input {
+    padding: 10px;
+    border-radius: 15px;
+    border: 3px solid #1a4b91; 
+    width: 46px; 
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.year-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+}
+
+.year-label {
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    margin-right: 2px;
+    margin-bottom: 5px;
+}
+
+.search-button {
+    background-color: #173f77; 
+    color: rgb(255, 255, 255);
+    padding: 7px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.search-button:hover {
+    background-color: #153a70;
+}
