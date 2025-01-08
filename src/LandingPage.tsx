@@ -16,18 +16,18 @@ const LandingPage: React.FC = () => {
       );
       const data = await response.json();
   
-      console.log(data); // Log the full API response for debugging
+      console.log(data); 
   
-      // Map the response to extract only relevant fields
+    
       return data.collection.items.map((item: any) => ({
-        href: item.links?.[0]?.href || "", // Ensure valid image URL or empty string
-        title: item.data?.[0]?.title || "Untitled", // Provide default title
-        description: item.data?.[0]?.description || "No description available.", // Default description
-        date_created: item.data?.[0]?.date_created || "Unknown date", // Default date
+        href: item.links?.[0]?.href || "", 
+        title: item.data?.[0]?.title || "Untitled", 
+        description: item.data?.[0]?.description || "No description available.", 
+        date_created: item.data?.[0]?.date_created || "Unknown date", 
       }));
     } catch (error) {
       console.error("Error fetching data:", error);
-      return []; // Return an empty array in case of error
+      return []; 
     }
   };
   
@@ -48,7 +48,7 @@ const LandingPage: React.FC = () => {
       return;
     }
   
-    setError(""); // Clear any previous error messages
+    setError(""); 
     navigate("/display", { state: { images } });
   };
   
