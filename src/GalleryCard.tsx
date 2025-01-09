@@ -27,6 +27,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
         <img src={href} alt={title} className="gallery-image" />
         <p className="image-date">{formattedDate}</p>
       </div>
+      <div className="divider"></div> 
       <div className="card-details">
         <p className="image-description">
           {description || "No description available."}
