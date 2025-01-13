@@ -1,80 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
 .display-page {
     background-image: url('/src/assets/background.jpg'); 
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
+    padding: 20px; 
 }
-  
+
 .back-button {
     position: absolute;
-    top: 40px;
-    left: 50px;
+    top: 20px;
+    left: 20px;
     background-color: #1a4b91;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: none;
-    border-radius: 10px;
-    font-size: 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
+    font-family: "Space Grotesk", sans-serif;
 }
-  
+
+.back-button:hover {
+    background-color: #173f77;
+}
+
 .gallery-card {
     display: flex;
+    flex-wrap: wrap; 
     background-color: #fae6fa;
     padding: 20px;
     border-radius: 15px;
-    width: 70%;
+    width: 90%; 
     max-width: 800px;
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin-top: 20px; 
     position: relative;
 }
-  
+
 .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 20px;
+    width: 100%; 
+    max-width: 300px; 
 }
-  
+
 .gallery-image {
-    width: 300px;
+    width: 100%; 
+    max-width: 300px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
-  
+
 .image-date {
     font-size: 0.9rem;
     color: #555;
     margin-top: 5px;
     font-family: "Space Grotesk", sans-serif;
+    text-align: center;
 }
-  
+
 .card-details {
     flex: 1;
     overflow-y: auto;
     max-height: 400px;
+    width: 100%; 
 }
-  
+
 .image-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: black;
     font-family: "Space Grotesk", sans-serif;
+    text-align: center; 
 }
-  
+
 .image-description {
     font-size: 1rem;
     color: black;
     font-family: "Space Grotesk", sans-serif;
     text-align: justify;
 }
-  
+
 .navigation-buttons {
     display: flex;
     justify-content: space-between;
@@ -84,7 +100,7 @@
     transform: translateY(-50%);
     pointer-events: none;
 }
-  
+
 .nav-button {
     background-color: transparent;
     color: #fae6fa;
@@ -97,13 +113,89 @@
 .nav-button:hover {
     color: #f5c9f5;
 }
-  
+
 .nav-button:first-child {
     position: absolute;
-    left: 20px;
+    left: 10px; 
 }
-  
+
 .nav-button:last-child {
     position: absolute;
-    right: 20px;
+    right: 10px; 
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Devices (up to 600px width) */
+@media (max-width: 600px) {
+    .gallery-card {
+        flex-direction: column; 
+        padding: 15px;
+    }
+
+    .card-content {
+        margin-right: 0;
+        width: 100%; 
+    }
+
+    .card-details {
+        margin-top: 15px; 
+    }
+
+    .image-title {
+        font-size: 1.2rem;
+    }
+
+    .image-date {
+        font-size: 0.8rem;
+    }
+
+    .image-description {
+        font-size: 0.9rem;
+    }
+
+    .nav-button {
+        font-size: 1.5rem; 
+    }
+}
+
+/* Tablets (601px to 1024px width) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .gallery-card {
+        flex-wrap: nowrap;
+    }
+
+    .card-content {
+        margin-right: 10px;
+        width: 45%; 
+    }
+
+    .gallery-image {
+        max-width: 250px;
+    }
+
+    .image-title {
+        font-size: 1.4rem;
+    }
+
+    .image-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+    .gallery-card {
+        flex-direction: row;
+        max-width: 800px;
+    }
+
+    .card-content {
+        margin-right: 20px;
+        width: 45%;
+    }
+
+    .gallery-image {
+        max-width: 300px;
+    }
 }
